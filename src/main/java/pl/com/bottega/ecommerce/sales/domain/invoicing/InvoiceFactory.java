@@ -7,8 +7,8 @@ import pl.com.bottega.ecommerce.canonicalmodel.publishedlanguage.Id;
 public class InvoiceFactory {
 
 
-    public static Invoice generateInvoice( ClientData client ) {
-        return new Invoice(Id.generate(), client);
+    public static Invoice generateInvoice(InvoiceRequest invoiceRequest) {
+        return new Invoice(Id.generate(), invoiceRequest.getClient());
     }
 
 }
